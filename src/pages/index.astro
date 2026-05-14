@@ -38,15 +38,15 @@ const publications = [
     <img class="avatar" src={avatar} alt={`Photo of ${name}`} />
     <div class="bio">
       <h1>{name}</h1>
-      <p>{tagline}</p>
+      <p class="tagline">{tagline}</p>
       <p>
         <!-- TODO: short about-me paragraph. Background, current affiliation,
              what you're currently working on, and what you're interested in. -->
         I'm an AI researcher interested in <em>[topics]</em>. Previously
         <em>[affiliation / past work]</em>. Currently <em>[what you're doing now]</em>.
       </p>
-      <p>
-        Contact: <a href={`mailto:${email}`}>{email}</a>
+      <p class="contact">
+        <a href={`mailto:${email}`}>{email}</a>
       </p>
       <ul class="socials">
         {socials.map((s) => (
