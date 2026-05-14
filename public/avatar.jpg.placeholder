@@ -1,0 +1,2 @@
+Drop your profile photo at `public/avatar.jpg` (or update the `avatar` path in
+`src/pages/index.astro`). Delete this placeholder file once you've added one.

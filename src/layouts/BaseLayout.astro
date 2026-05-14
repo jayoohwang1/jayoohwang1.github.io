@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Personal site' } = Astro.props;
+const siteName = 'YOUR NAME';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href={import.meta.env.BASE_URL} class="brand">{siteName}</a>
+      <nav>
+        <a href={import.meta.env.BASE_URL}>Home</a>
+        <a href={`${import.meta.env.BASE_URL}blog/`.replace(/\/+/g, '/')}>Blog</a>
+        <a href={`${import.meta.env.BASE_URL}reading/`.replace(/\/+/g, '/')}>Reading</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>© {new Date().getFullYear()} {siteName}</p>
+    </footer>
+  </body>
+</html>

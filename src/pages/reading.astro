@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// TODO: fill in your reading list. Group however you like; this is just a
+// starter structure. Items support: title, author, year, link (optional),
+// note (optional, your one-line take).
+type Item = {
+  title: string;
+  author?: string;
+  year?: string | number;
+  link?: string;
+  note?: string;
+};
+
+const currentlyReading: Item[] = [
+  { title: 'Currently reading title', author: 'Author', year: 2024, note: 'Why you picked it up.' },
+];
+
+const books: Item[] = [
+  { title: 'Book title', author: 'Author', year: 2023, note: 'One-line take.' },
+  { title: 'Another book', author: 'Author' },
+];
+
+const papers: Item[] = [
+  { title: 'Paper title', author: 'Authors', year: 2024, link: '#', note: 'Why it stuck with you.' },
+];
+
+const sections: { heading: string; items: Item[] }[] = [
+  { heading: 'Currently reading', items: currentlyReading },
+  { heading: 'Books', items: books },
+  { heading: 'Papers', items: papers },
+];
+---
+<BaseLayout title="Reading">
+  <h1>Reading</h1>
+  <p>Books and papers I've read or am working through.</p>
+
+  {sections.map((section) => (
+    <section>
+      <h2>{section.heading}</h2>
+      {section.items.length === 0 ? (
+        <p>Nothing here yet.</p>
+      ) : (
+        <ul class="reading-list">
+          {section.items.map((item) => (
+            <li>
+              <div>
+                {item.link ? <a href={item.link}>{item.title}</a> : <strong>{item.title}</strong>}
+              </div>
+              <div class="meta">
+                {[item.author, item.year].filter(Boolean).join(' · ')}
+              </div>
+              {item.note && <p>{item.note}</p>}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  ))}
+</BaseLayout>

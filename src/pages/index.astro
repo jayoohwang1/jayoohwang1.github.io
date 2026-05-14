@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// TODO: replace with your details.
+const name = 'YOUR NAME';
+const tagline = 'AI researcher working on [your research area].';
+const email = 'you@example.com';
+const avatar = '/avatar.jpg'; // drop a photo at public/avatar.jpg
+
+const socials = [
+  { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=YOUR_ID' },
+  { label: 'GitHub', href: 'https://github.com/YOUR_HANDLE' },
+  { label: 'Twitter / X', href: 'https://x.com/YOUR_HANDLE' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/YOUR_HANDLE' },
+];
+
+// TODO: replace with your publications.
+const publications = [
+  {
+    title: 'Paper Title Goes Here',
+    authors: 'A. Author, B. Author, YOUR NAME',
+    venue: 'Venue / Year',
+    links: [
+      { label: 'paper', href: '#' },
+      { label: 'code', href: '#' },
+    ],
+  },
+  {
+    title: 'Another Paper Title',
+    authors: 'YOUR NAME, C. Author',
+    venue: 'Venue / Year',
+    links: [{ label: 'paper', href: '#' }],
+  },
+];
+---
+<BaseLayout title={name} description={tagline}>
+  <section class="intro">
+    <img class="avatar" src={avatar} alt={`Photo of ${name}`} />
+    <div class="bio">
+      <h1>{name}</h1>
+      <p>{tagline}</p>
+      <p>
+        <!-- TODO: short about-me paragraph. Background, current affiliation,
+             what you're currently working on, and what you're interested in. -->
+        I'm an AI researcher interested in <em>[topics]</em>. Previously
+        <em>[affiliation / past work]</em>. Currently <em>[what you're doing now]</em>.
+      </p>
+      <p>
+        Contact: <a href={`mailto:${email}`}>{email}</a>
+      </p>
+      <ul class="socials">
+        {socials.map((s) => (
+          <li><a href={s.href} rel="me noopener">{s.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <ul class="pubs">
+      {publications.map((p) => (
+        <li>
+          <div class="title">{p.title}</div>
+          <div>{p.authors}</div>
+          <div class="venue">
+            {p.venue}
+            {p.links.length > 0 && ' · '}
+            {p.links.map((l, i) => (
+              <>
+                <a href={l.href}>{l.label}</a>{i < p.links.length - 1 ? ' · ' : ''}
+              </>
+            ))}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
