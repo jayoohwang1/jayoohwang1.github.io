@@ -1,60 +1,63 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ReadingItem from '../components/ReadingItem.astro';
+import readingData from '../data/reading.json';
 
-// TODO: fill in your reading list. Group however you like; this is just a
-// starter structure. Items support: title, author, year, link (optional),
-// note (optional, your one-line take).
-type Item = {
+interface Item {
   title: string;
-  author?: string;
-  year?: string | number;
-  link?: string;
-  note?: string;
-};
+  url: string;
+  note: string;
+  children: Item[];
+}
 
-const currentlyReading: Item[] = [
-  { title: 'Currently reading title', author: 'Author', year: 2024, note: 'Why you picked it up.' },
-];
+interface Subsection {
+  title: string;
+  count: number;
+  items: Item[];
+}
 
-const books: Item[] = [
-  { title: 'Book title', author: 'Author', year: 2023, note: 'One-line take.' },
-  { title: 'Another book', author: 'Author' },
-];
+interface Section {
+  title: string;
+  count: number;
+  items: Item[];
+  subsections: Subsection[];
+}
 
-const papers: Item[] = [
-  { title: 'Paper title', author: 'Authors', year: 2024, link: '#', note: 'Why it stuck with you.' },
-];
-
-const sections: { heading: string; items: Item[] }[] = [
-  { heading: 'Currently reading', items: currentlyReading },
-  { heading: 'Books', items: books },
-  { heading: 'Papers', items: papers },
-];
+const sections = readingData.sections as Section[];
 ---
 <BaseLayout title="Reading">
   <h1>Reading</h1>
-  <p>Books and papers I've read or am working through.</p>
+  <p>
+    A running log of papers I'm reading or have read, grouped by topic.
+    Click a section to expand it.
+  </p>
 
-  {sections.map((section) => (
-    <section>
-      <h2>{section.heading}</h2>
-      {section.items.length === 0 ? (
-        <p>Nothing here yet.</p>
-      ) : (
-        <ul class="reading-list">
-          {section.items.map((item) => (
-            <li>
-              <div>
-                {item.link ? <a href={item.link}>{item.title}</a> : <strong>{item.title}</strong>}
-              </div>
-              <div class="meta">
-                {[item.author, item.year].filter(Boolean).join(' · ')}
-              </div>
-              {item.note && <p>{item.note}</p>}
-            </li>
+  <div class="reading">
+    {sections.map((section) => (
+      <details class="section" open={section.title === 'Agent'}>
+        <summary>
+          <span class="section-title">{section.title}</span>
+          <span class="count">{section.count}</span>
+        </summary>
+        <div class="section-body">
+          {section.items.length > 0 && (
+            <ul class="item-list">
+              {section.items.map((item) => <ReadingItem item={item} />)}
+            </ul>
+          )}
+          {section.subsections.map((sub) => (
+            <details class="subsection">
+              <summary>
+                <span class="subsection-title">{sub.title}</span>
+                <span class="count">{sub.count}</span>
+              </summary>
+              <ul class="item-list">
+                {sub.items.map((item) => <ReadingItem item={item} />)}
+              </ul>
+            </details>
           ))}
-        </ul>
-      )}
-    </section>
-  ))}
+        </div>
+      </details>
+    ))}
+  </div>
 </BaseLayout>

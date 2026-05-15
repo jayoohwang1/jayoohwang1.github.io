@@ -1,0 +1,25 @@
+---
+import Self from './ReadingItem.astro';
+
+interface Item {
+  title: string;
+  url: string;
+  note: string;
+  children: Item[];
+}
+
+interface Props {
+  item: Item;
+}
+
+const { item } = Astro.props;
+---
+<li>
+  {item.url ? <a href={item.url}>{item.title}</a> : <span>{item.title}</span>}
+  {item.note && <span class="note"> {item.note}</span>}
+  {item.children.length > 0 && (
+    <ul class="item-list">
+      {item.children.map((child) => <Self item={child} />)}
+    </ul>
+  )}
+</li>

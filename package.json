@@ -4,9 +4,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "predev": "node scripts/sync-reading.mjs",
     "dev": "astro dev",
+    "prebuild": "node scripts/sync-reading.mjs",
     "build": "astro build",
     "preview": "astro preview",
+    "sync-reading": "node scripts/sync-reading.mjs",
     "astro": "astro"
   },
   "dependencies": {
