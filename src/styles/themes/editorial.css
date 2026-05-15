@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  --max-width: 760px;
+  --font-serif: 'EB Garamond', 'ET Book', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+:root,
+:root[data-theme='light'] {
+  --bg: #fffff8;
+  --fg: #111111;
+  --muted: #5a5a55;
+  --subtle: #a09c90;
+  --border: #d8d4c8;
+  --accent: #8b1a1a;
+  --accent-hover: #5d1010;
+  --surface: #f3eedf;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #15140f;
+  --fg: #e8e4d6;
+  --muted: #a09c8e;
+  --subtle: #6e6c66;
+  --border: #2d2a22;
+  --accent: #d68585;
+  --accent-hover: #e8aaaa;
+  --surface: #23211c;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern', 'liga', 'onum';
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 5rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: color 120ms ease, border-color 120ms ease;
+}
+a:hover {
+  color: var(--accent-hover);
+  border-bottom-color: currentColor;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+  font-weight: 500;
+}
+h1 {
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0.5rem 0 0.5rem;
+  letter-spacing: -0.005em;
+}
+h2 {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--fg);
+  margin: 3rem 0 0.75rem;
+  border: none;
+  padding: 0;
+}
+h3 {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 2rem 0 0.35rem;
+}
+
+p {
+  margin: 0.65rem 0;
+  hyphens: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* header / nav */
+.site-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 0.75rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.site-header .brand {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--fg);
+  border-bottom: none;
+}
+.site-header .brand:hover {
+  color: var(--accent);
+  border-bottom-color: transparent;
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+.site-header nav a {
+  color: var(--muted);
+  border-bottom: none;
+}
+.site-header nav a:hover {
+  color: var(--accent);
+  border-bottom-color: transparent;
+}
+
+/* theme toggle */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  cursor: pointer;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.theme-toggle svg {
+  width: 15px;
+  height: 15px;
+}
+.theme-toggle .icon-sun {
+  display: none;
+}
+:root[data-theme='dark'] .theme-toggle .icon-sun {
+  display: inline;
+}
+:root[data-theme='dark'] .theme-toggle .icon-moon {
+  display: none;
+}
+
+/* footer */
+footer {
+  max-width: var(--max-width);
+  margin: 4rem auto 2rem;
+  padding: 1.5rem 1.5rem 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-style: italic;
+  border-top: 1px solid var(--border);
+}
+footer p {
+  margin: 0;
+}
+
+/* intro / home */
+.intro {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.intro .avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 0;
+  object-fit: cover;
+  background: var(--surface);
+  font-size: 0;
+  flex-shrink: 0;
+}
+.intro .bio {
+  flex: 1;
+  min-width: 280px;
+}
+.intro h1 {
+  margin-top: 0;
+}
+.intro .tagline {
+  color: var(--muted);
+  margin-top: 0;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.intro .bio p {
+  text-align: left;
+}
+
+.contact {
+  color: var(--muted);
+  margin-top: 1.25rem;
+  font-style: italic;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 0;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+.socials li {
+  display: inline-flex;
+  align-items: center;
+}
+.socials li:not(:last-child)::after {
+  content: '·';
+  margin: 0 0.6rem;
+  color: var(--subtle);
+}
+.socials a {
+  color: var(--muted);
+  border-bottom: none;
+}
+.socials a:hover {
+  color: var(--accent);
+  border-bottom-color: currentColor;
+}
+
+/* lists: publications, posts, reading */
+.pubs,
+.posts,
+.reading-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+.pubs li,
+.posts li,
+.reading-list li {
+  padding: 0.9rem 0;
+  border: none;
+}
+.pubs .title,
+.posts .title {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.pubs .title a,
+.posts .title a {
+  border-bottom: none;
+}
+.pubs .title a:hover,
+.posts .title a:hover {
+  border-bottom: 1px solid currentColor;
+}
+.pubs .authors {
+  color: var(--fg);
+}
+.pubs .venue,
+.posts .date,
+.reading-list .meta {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 0.15rem;
+}
+.posts li p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+
+/* blog article */
+article h1 {
+  margin-bottom: 0.25rem;
+  font-size: 2.4rem;
+}
+article > .date {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+article p,
+article ul,
+article ol {
+  font-size: 1.1rem;
+}
+article p {
+  text-align: justify;
+  hyphens: auto;
+}
+article blockquote {
+  border: none;
+  margin: 1.5rem 2rem;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--fg);
+}
+article code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--surface);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+article pre {
+  font-family: var(--font-mono);
+  background: var(--surface);
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+article pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 1em;
+}
+
+/*
+  Sidenote support — write inside an article as:
+    <span class="sidenote-number"></span>
+    <span class="sidenote">Margin note text goes here.</span>
+  On wide screens the note floats into the right margin; on narrow
+  screens it collapses inline with a small left rule.
+*/
+body {
+  counter-reset: sidenote-counter;
+}
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+.sidenote-number::after {
+  content: counter(sidenote-counter);
+  font-size: 0.75em;
+  vertical-align: super;
+  color: var(--accent);
+}
+.sidenote {
+  float: right;
+  clear: right;
+  width: 200px;
+  margin: 0 -240px 0.5rem 0;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--muted);
+  font-style: italic;
+}
+.sidenote::before {
+  counter-increment: sidenote-display 0;
+  content: counter(sidenote-counter) ' ';
+  color: var(--accent);
+  font-style: normal;
+}
+@media (max-width: 1100px) {
+  .sidenote {
+    float: none;
+    clear: none;
+    width: auto;
+    margin: 0.75rem 0;
+    display: block;
+    border-left: 2px solid var(--border);
+    padding-left: 0.85rem;
+  }
+}
+
+/* responsive */
+@media (max-width: 540px) {
+  body {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  article h1 {
+    font-size: 2rem;
+  }
+  .intro {
+    gap: 1.25rem;
+  }
+  .intro .avatar {
+    width: 110px;
+    height: 110px;
+  }
+  .site-header {
+    padding: 1.25rem 1rem 0.5rem;
+  }
+  main {
+    padding: 1rem 1rem 3rem;
+  }
+  article p {
+    text-align: left;
+  }
+}

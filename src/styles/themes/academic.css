@@ -1,7 +1,6 @@
 :root {
   --max-width: 680px;
   --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Source Serif 4', 'Source Serif Pro', Georgia, Cambria, serif;
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 }
 
