@@ -25,16 +25,17 @@ interface Section {
 
 const sections = readingData.sections as Section[];
 ---
-<BaseLayout title="Reading">
+<BaseLayout title="Paper Reading List">
   <h1>Reading</h1>
   <p>
-    A running log of papers I'm reading or have read, grouped by topic.
-    Click a section to expand it.
+    My running log of bookmarks, mostly consisting of AI papers from 2024 to present. 
+    Definitely not an exhaustive list of these topics, but I still try to keep a decent 
+    amount of coverage so that I can dive in quickly as needed. 
   </p>
 
   <div class="reading">
     {sections.map((section) => (
-      <details class="section" open={section.title === 'Agent'}>
+      <details class="section" open={section.title === 'LLM Agents'}>
         <summary>
           <span class="section-title">{section.title}</span>
           <span class="count">{section.count}</span>

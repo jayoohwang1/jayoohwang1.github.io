@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-15T02:38:00.095Z",
+  "generatedAt": "2026-05-18T20:58:51.588Z",
   "sections": [
     {
-      "title": "Agent",
+      "title": "LLM Agents",
       "items": [],
       "subsections": [
         {
@@ -376,7 +376,14 @@
                   "title": "WebWatcher: Breaking New Frontiers of Vision-Language Deep Research Agent (2025)",
                   "url": "https://x.com/richardxp888/status/1955689501281669168",
                   "note": "",
-                  "children": []
+                  "children": [
+                    {
+                      "title": "HyperEyes: Search wider, not longer (2026)",
+                      "url": "https://x.com/HuggingPapers/status/2055448719152357612/photo/1",
+                      "note": "",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "title": "WebExplorer: Explore and Evolve for Training Long-Horizon Web Agents (2025)",
@@ -718,7 +725,7 @@
               "children": []
             }
           ],
-          "count": 115
+          "count": 116
         },
         {
           "title": "Code",
@@ -1434,6 +1441,12 @@
                   ]
                 },
                 {
+                  "title": "MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory (2026)",
+                  "url": "https://x.com/MurphyKwok_/status/2055308764413116691/photo/1",
+                  "note": "",
+                  "children": []
+                },
+                {
                   "title": "Pretraining with hierarchical memories: separating long-tail and common knowledge (2025)",
                   "url": "https://x.com/awnihannun/status/1975212210252304718",
                   "note": "",
@@ -1533,6 +1546,12 @@
                         {
                           "title": "Rethinking Agentic Search with Pi-SERINI: Is Lexical Retrieval Sufficient? (2026)",
                           "url": "https://x.com/_reachsumit/status/2054097574802678191",
+                          "note": "",
+                          "children": []
+                        },
+                        {
+                          "title": "Is Grep All You Need? How Agent Harnesses Reshape Agentic Search (2026)",
+                          "url": "https://x.com/_reachsumit/status/2055139484027793850",
                           "note": "",
                           "children": []
                         }
@@ -1757,7 +1776,7 @@
               ]
             }
           ],
-          "count": 83
+          "count": 85
         },
         {
           "title": "Context Engineering",
@@ -1831,6 +1850,12 @@
                 {
                   "title": "Collaborative Multi-Agent Test-Time Reinforcement Learning for Reasoning (2026)",
                   "url": "https://x.com/fly51fly/status/2011913147964412137/photo/2",
+                  "note": "",
+                  "children": []
+                },
+                {
+                  "title": "Contexting as Recommendation: Evolutionary Collaborative Filtering for Context Engineering (2026)",
+                  "url": "https://arxiv.org/pdf/2605.15721",
                   "note": "",
                   "children": []
                 }
@@ -2012,7 +2037,7 @@
               ]
             }
           ],
-          "count": 40
+          "count": 41
         },
         {
           "title": "Reasoning Scaffolding",
@@ -2194,6 +2219,12 @@
             {
               "title": "Self-Improving Pretraining: using post-trained models to pretrain better models (2026)",
               "url": "https://x.com/jaseweston/status/2017071377866494226",
+              "note": "",
+              "children": []
+            },
+            {
+              "title": "ECHO: Terminal Agents Learn World Models for Free (2026)",
+              "url": "https://x.com/DimitrisPapail/status/2056368948870811746",
               "note": "",
               "children": []
             },
@@ -2397,6 +2428,12 @@
                     {
                       "title": "State of RL for reasoning LLMs - blog (2026)",
                       "url": "https://aweers.de/blog/2026/rl-for-llms/",
+                      "note": "",
+                      "children": []
+                    },
+                    {
+                      "title": "Hands-On Modern RL tutorial - (2026)",
+                      "url": "https://x.com/sheriyuo/status/2055234238660927577",
                       "note": "",
                       "children": []
                     },
@@ -3274,8 +3311,8 @@
               "children": []
             },
             {
-              "title": "* [rStar-Math (2025)](https://arxiv.org/pdf/2501.04519)",
-              "url": "",
+              "title": "rStar-Math (2025)",
+              "url": "https://arxiv.org/pdf/2501.04519",
               "note": "",
               "children": []
             },
@@ -3565,8 +3602,8 @@
                   "children": []
                 },
                 {
-                  "title": "[miniCTX: Neural Theorem Proving with Long Contexts (2024)](https://arxiv.org/pdf/2408.03350",
-                  "url": "",
+                  "title": "miniCTX: Neural Theorem Proving with Long Contexts (2024)",
+                  "url": "https://arxiv.org/pdf/2408.03350",
                   "note": "",
                   "children": []
                 },
@@ -3823,7 +3860,7 @@
               ]
             }
           ],
-          "count": 266
+          "count": 268
         },
         {
           "title": "Latent Reasoning",
@@ -4229,6 +4266,12 @@
                       "note": "",
                       "children": [
                         {
+                          "title": "MM-SeR: Multimodal Self-Refinement for Lightweight Image Captioning (2026)",
+                          "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dkRTvvcAAAAJ&sortby=pubdate&citation_for_view=dkRTvvcAAAAJ:qxL8FJ1GzNcC",
+                          "note": "",
+                          "children": []
+                        },
+                        {
                           "title": "Knowing When to Stop: Efficient Context Processing via Latent Sufficiency Signals (2026)",
                           "url": "https://arxiv.org/pdf/2502.01025",
                           "note": "",
@@ -4473,6 +4516,12 @@
                         {
                           "title": "KVzap: Fast, Adaptive, and Faithful KV Cache Pruning (2026)",
                           "url": "https://x.com/simon_jegou/status/2011376510410911919",
+                          "note": "",
+                          "children": []
+                        },
+                        {
+                          "title": "Self-Pruned Key-Value Attention: Learning When to Write by Predicting Future Utility (2026)",
+                          "url": "https://x.com/TheTuringPost/status/2055828260542644463",
                           "note": "",
                           "children": []
                         }
@@ -4740,7 +4789,7 @@
               ]
             }
           ],
-          "count": 93
+          "count": 95
         },
         {
           "title": "Retrieval",
@@ -5214,7 +5263,7 @@
           "count": 74
         }
       ],
-      "count": 832
+      "count": 840
     },
     {
       "title": "Model Architecture",
@@ -6622,6 +6671,12 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "title": "Slicing and Dicing: Configuring Optimal Mixtures of Experts (2026)",
+                  "url": "https://x.com/margs_li/status/2056355079188627862",
+                  "note": "",
+                  "children": []
                 }
               ]
             }
@@ -6772,7 +6827,7 @@
         }
       ],
       "subsections": [],
-      "count": 248
+      "count": 249
     },
     {
       "title": "Theory",

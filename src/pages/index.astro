@@ -2,17 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // TODO: replace with your details.
-const name = 'YOUR NAME';
-const tagline = 'AI researcher working on [your research area].';
-const email = 'you@example.com';
+const name = 'Jayoo Hwang';
+const tagline = 'AI researcher and engineer.';
+const email = 'jayoohm350@gmail.com';
 const avatar = '/avatar.jpg'; // drop a photo at public/avatar.jpg
 
+// Set `ready: false` on any item to hide it from the site.
+// Same flag works on socials, publications, and publication links.
+const showBestWork = false;
+
 const socials = [
-  { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=YOUR_ID' },
-  { label: 'GitHub', href: 'https://github.com/YOUR_HANDLE' },
-  { label: 'Twitter / X', href: 'https://x.com/YOUR_HANDLE' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/YOUR_HANDLE' },
-];
+  { label: 'Email', icon: 'email', href: `mailto:${email}` },
+  { label: 'Google Scholar', icon: 'scholar', href: 'https://scholar.google.com/citations?user=YOUR_ID', ready: false },
+  { label: 'GitHub', icon: 'github', href: 'https://github.com/jayoohwang1' },
+  { label: 'LinkedIn', icon: 'linkedin', href: 'https://www.linkedin.com/in/jayoo-hwang-a3a17027b/' },
+  { label: 'X', icon: 'x', href: 'https://x.com/JayooHwang' },
+].filter((s) => s.ready !== false);
 
 // TODO: replace with your publications.
 const publications = [
@@ -20,18 +25,16 @@ const publications = [
     title: 'Paper Title Goes Here',
     authors: 'A. Author, B. Author, YOUR NAME',
     venue: 'Venue / Year',
+    ready: false,
     links: [
-      { label: 'paper', href: '#' },
-      { label: 'code', href: '#' },
+      { label: 'paper', href: '#', ready: false },
+      { label: 'code', href: '#', ready: false },
+      { label: 'website', href: 'https://jayoohwang1.github.io/webchallenger-site/' },
     ],
-  },
-  {
-    title: 'Another Paper Title',
-    authors: 'YOUR NAME, C. Author',
-    venue: 'Venue / Year',
-    links: [{ label: 'paper', href: '#' }],
-  },
-];
+  }
+]
+  .filter((p) => p.ready !== false)
+  .map((p) => ({ ...p, links: p.links.filter((l) => l.ready !== false) }));
 ---
 <BaseLayout title={name} description={tagline}>
   <section class="intro">
@@ -42,20 +45,52 @@ const publications = [
       <p>
         <!-- TODO: short about-me paragraph. Background, current affiliation,
              what you're currently working on, and what you're interested in. -->
-        I'm an AI researcher interested in <em>[topics]</em>. Previously
-        <em>[affiliation / past work]</em>. Currently <em>[what you're doing now]</em>.
+        I work on building systems that utilize LLMs as effectively as possible.
+        I'm interested in harness design, RL, context processing, and memory for agents.
       </p>
-      <p class="contact">
-        <a href={`mailto:${email}`}>{email}</a>
-      </p>
-      <ul class="socials">
+      {showBestWork && (
+        <p>
+          <b>My best work:</b> created <a href="https://jayoohwang1.github.io/webchallenger-site/">WebChallenger</a>, a generalist web agent that achieved
+          open-model SOTA across multiple benchmarks.
+        </p>
+      )}
+      <ul class="socials icons">
         {socials.map((s) => (
-          <li><a href={s.href} rel="me noopener">{s.label}</a></li>
+          <li>
+            <a href={s.href} rel="me noopener" aria-label={s.label} title={s.label}>
+              {s.icon === 'email' && (
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M2.5 5.5h19c.55 0 1 .45 1 1v11c0 .55-.45 1-1 1h-19c-.55 0-1-.45-1-1v-11c0-.55.45-1 1-1zm.95 1.6 8.55 6.05L20.55 7.1H3.45zm17.05 1.27-7.46 5.28a1 1 0 0 1-1.16 0L3.5 8.37V17.4h17V8.37z"/>
+                </svg>
+              )}
+              {s.icon === 'scholar' && (
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2 1 9l11 7 9-5.73V17h2V9zM5 13.18v4L12 21l7-3.82v-4L12 17z"/>
+                </svg>
+              )}
+              {s.icon === 'github' && (
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.07 11.07 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.13 0 1.54-.01 2.78-.01 3.16 0 .31.21.67.8.56C20.21 21.38 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+                </svg>
+              )}
+              {s.icon === 'linkedin' && (
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.45 3H3.55C2.7 3 2 3.68 2 4.52v14.96C2 20.32 2.7 21 3.55 21h16.9c.85 0 1.55-.68 1.55-1.52V4.52C22 3.68 21.3 3 20.45 3zM8.34 18.34H5.67V9.67h2.67zM7 8.5a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1zm11.34 9.84h-2.67v-4.21c0-1 0-2.3-1.4-2.3-1.41 0-1.63 1.1-1.63 2.23v4.28h-2.67V9.67h2.56v1.18h.04c.36-.68 1.24-1.4 2.55-1.4 2.73 0 3.23 1.8 3.23 4.13v4.76z"/>
+                </svg>
+              )}
+              {s.icon === 'x' && (
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25h6.83l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              )}
+            </a>
+          </li>
         ))}
       </ul>
     </div>
   </section>
 
+  {publications.length > 0 && (
   <section>
     <h2>Publications</h2>
     <ul class="pubs">
@@ -76,4 +111,5 @@ const publications = [
       ))}
     </ul>
   </section>
+  )}
 </BaseLayout>

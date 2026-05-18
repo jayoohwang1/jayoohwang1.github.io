@@ -2,7 +2,7 @@
 title: "Hello, world"
 description: "Placeholder first post."
 pubDate: 2026-05-13
-draft: false
+draft: true
 ---
 
 This is a placeholder post. Delete or replace it.

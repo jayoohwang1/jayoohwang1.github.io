@@ -222,7 +222,7 @@ footer p {
 .socials {
   list-style: none;
   padding: 0;
-  margin: 0.5rem 0 0;
+  margin: 0.75rem 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.15rem 0;
@@ -242,6 +242,33 @@ footer p {
 }
 .socials a:hover {
   color: var(--accent);
+}
+
+/* icon variant — used on the home page contact row */
+.socials.icons {
+  gap: 1.1rem;
+  align-items: center;
+}
+.socials.icons li:not(:last-child)::after {
+  content: none;
+}
+.socials.icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg);
+  border-bottom: none;
+  line-height: 0;
+}
+.socials.icons a:hover {
+  color: var(--accent);
+  border-bottom: none;
+}
+.socials.icons svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+  fill: currentColor;
 }
 
 /* lists: publications, posts, reading */
@@ -282,6 +309,12 @@ footer p {
 .posts li p {
   margin-top: 0.35rem;
   color: var(--muted);
+}
+
+.coming-soon {
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1rem;
 }
 
 /* blog article */

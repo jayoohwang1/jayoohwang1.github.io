@@ -11,7 +11,7 @@ const fmt = (d: Date) =>
 <BaseLayout title="Blog">
   <h1>Blog</h1>
   {posts.length === 0 ? (
-    <p>No posts yet.</p>
+    <p class="coming-soon">Coming soon.</p>
   ) : (
     <ul class="posts">
       {posts.map((post) => (
