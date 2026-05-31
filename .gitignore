@@ -21,5 +21,9 @@ pnpm-debug.log*
 .vscode/
 .idea/
 
+# scripts / data
+# scripts/
+# src/data/
+
 # claude code
 CLAUDE.md

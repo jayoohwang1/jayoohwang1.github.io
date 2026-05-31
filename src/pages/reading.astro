@@ -61,4 +61,11 @@ const sections = readingData.sections as Section[];
       </details>
     ))}
   </div>
+
+  <script>
+    // Clicking a link inside a collapsible item shouldn't also toggle the details.
+    document.querySelectorAll('.reading .item-list summary a').forEach((a) => {
+      a.addEventListener('click', (e) => e.stopPropagation());
+    });
+  </script>
 </BaseLayout>

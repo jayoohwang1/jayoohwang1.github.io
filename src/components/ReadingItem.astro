@@ -13,13 +13,25 @@ interface Props {
 }
 
 const { item } = Astro.props;
+const hasChildren = item.children.length > 0;
+// Items without a URL act as mini-headers — collapsed by default.
+const startOpen = item.url !== '';
 ---
-<li>
-  {item.url ? <a href={item.url}>{item.title}</a> : <span>{item.title}</span>}
-  {item.note && <span class="note"> {item.note}</span>}
-  {item.children.length > 0 && (
-    <ul class="item-list">
-      {item.children.map((child) => <Self item={child} />)}
-    </ul>
-  )}
-</li>
+{hasChildren ? (
+  <li class="has-children">
+    <details open={startOpen}>
+      <summary>
+        {item.url ? <a href={item.url}>{item.title}</a> : <span>{item.title}</span>}
+        {item.note && <>{' '}<span class="note">{item.note}</span></>}
+      </summary>
+      <ul class="item-list">
+        {item.children.map((child) => <Self item={child} />)}
+      </ul>
+    </details>
+  </li>
+) : (
+  <li>
+    {item.url ? <a href={item.url}>{item.title}</a> : <span>{item.title}</span>}
+    {item.note && <>{' '}<span class="note">{item.note}</span></>}
+  </li>
+)}
