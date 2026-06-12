@@ -1,5 +1,5 @@
 :root {
-  --max-width: 680px;
+  --max-width: 800px;
   --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Source Serif 4', 'Source Serif Pro', Georgia, Cambria, serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 }
@@ -73,13 +73,13 @@ h4 {
   line-height: 1.3;
 }
 h1 {
-  font-size: 1.75rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin: 1rem 0 0.5rem;
   letter-spacing: -0.005em;
 }
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.75rem;
   font-weight: 600;
   color: var(--fg);
   margin: 2.75rem 0 1rem;
@@ -87,9 +87,14 @@ h2 {
   border-bottom: 1px solid var(--border);
 }
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 1.75rem 0 0.25rem;
+}
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.25rem;
 }
 
 p {
@@ -100,6 +105,40 @@ hr {
   border: none;
   border-top: 1px solid var(--border);
   margin: 2rem 0;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* lists hug the line that introduces them */
+ul,
+ol {
+  margin: 0.6rem 0;
+}
+p + ul,
+p + ol {
+  margin-top: 0.2rem;
+}
+li > ul,
+li > ol {
+  margin: 0.2rem 0;
+}
+
+/* figures: media + caption share one paragraph (single-newline markdown) */
+p:has(> img),
+p:has(> video) {
+  margin: 2rem 0;
+}
+p:has(> img) > em,
+p:has(> video) > em {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
 /* header / nav */
