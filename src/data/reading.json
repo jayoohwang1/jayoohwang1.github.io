@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T02:22:16.715Z",
+  "generatedAt": "2026-07-06T19:27:39.068Z",
   "sections": [
     {
       "title": "LLM Agents",
@@ -163,6 +163,12 @@
                 {
                   "title": "VERIFICAGENT: Integrating Expert Knowledge and Fact-Checked Memory for Robust Domain-Specific Task Planning (2025)",
                   "url": "https://openreview.net/pdf?id=9zvvQcT2ZO",
+                  "note": "",
+                  "children": []
+                },
+                {
+                  "title": "MemGUI-Agent: An End-to-End Long-Horizon Mobile GUI Agent with Proactive Context Management (2026)",
+                  "url": "https://arxiv.org/pdf/2606.19926",
                   "note": "",
                   "children": []
                 }
@@ -731,7 +737,7 @@
               "children": []
             }
           ],
-          "count": 117
+          "count": 118
         },
         {
           "title": "Code",
@@ -1628,6 +1634,12 @@
                           "url": "https://x.com/HuaxiuYaoML/status/2057858935609319512",
                           "note": "",
                           "children": []
+                        },
+                        {
+                          "title": "AutoMem: Automated Learning of Memory (2026)",
+                          "url": "https://x.com/ShengguangWu/status/2073083010631795083",
+                          "note": "",
+                          "children": []
                         }
                       ]
                     },
@@ -1760,6 +1772,12 @@
                           "url": "https://x.com/chongrui28836/status/2057321982614712639",
                           "note": "",
                           "children": []
+                        },
+                        {
+                          "title": "ABBEL: Learning Natural-Language Belief States for Memory-Efficient Interaction (2026)",
+                          "url": "https://x.com/a_lidayan/status/2065156973008744568",
+                          "note": "",
+                          "children": []
                         }
                       ]
                     },
@@ -1857,7 +1875,7 @@
               ]
             }
           ],
-          "count": 93
+          "count": 95
         },
         {
           "title": "Context Engineering",
@@ -2332,7 +2350,20 @@
               "title": "ECHO: Terminal Agents Learn World Models for Free (2026)",
               "url": "https://x.com/DimitrisPapail/status/2056368948870811746",
               "note": "",
-              "children": []
+              "children": [
+                {
+                  "title": "True Agents Model the World - Prime blog (2026)",
+                  "url": "https://www.primeintellect.ai/blog/true-agents-model-the-world",
+                  "note": "",
+                  "children": []
+                },
+                {
+                  "title": "TMax: A Simple Recipe for Terminal Agents (2026)",
+                  "url": "https://x.com/natolambert/status/2069055254961021150",
+                  "note": "",
+                  "children": []
+                }
+              ]
             },
             {
               "title": "Reinforced Attention Learning (2026)",
@@ -2415,6 +2446,12 @@
                     {
                       "title": "Learning from Rare Success and Rich Feedback via Reflection-Enhanced Self-Distillation (2026)",
                       "url": "https://x.com/YuweiZh49446108/status/2054322467347542242",
+                      "note": "",
+                      "children": []
+                    },
+                    {
+                      "title": "Solving OPSD (basically) - blog (2026)",
+                      "url": "https://x.com/ar0cket1/status/2065772402622263701",
                       "note": "",
                       "children": []
                     },
@@ -4053,7 +4090,7 @@
               ]
             }
           ],
-          "count": 282
+          "count": 285
         },
         {
           "title": "Latent Reasoning",
@@ -4124,6 +4161,12 @@
                         {
                           "title": "Pretraining Recurrent Networks without Recurrence (2026)",
                           "url": "https://x.com/akarshkumar0101/status/2063733781371252920/photo/1",
+                          "note": "",
+                          "children": []
+                        },
+                        {
+                          "title": "Multimodal Latent Reasoning via Predictive Embeddings (2026)",
+                          "url": "https://arxiv.org/abs/2604.08065",
                           "note": "",
                           "children": []
                         }
@@ -4319,7 +4362,14 @@
                           "title": "collection of looped model papers (2026)",
                           "url": "https://x.com/huskydogewoof/status/2047655947942744285",
                           "note": "",
-                          "children": []
+                          "children": [
+                            {
+                              "title": "Things You Need to Know About Weight-Tied Iterative Models in 2026 - blog",
+                              "url": "https://x.com/huskydogewoof/status/2067520786001530964",
+                              "note": "",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4477,7 +4527,7 @@
               ]
             }
           ],
-          "count": 67
+          "count": 69
         },
         {
           "title": "Context Compression",
@@ -4903,6 +4953,12 @@
                       "url": "https://x.com/HuggingPapers/status/2041492117919342906",
                       "note": "",
                       "children": []
+                    },
+                    {
+                      "title": "KV Cache Compression and Its Infra Problems - blog (2026)",
+                      "url": "https://x.com/WeianMaoX/status/2066570799843287397",
+                      "note": "",
+                      "children": []
                     }
                   ]
                 },
@@ -5136,7 +5192,7 @@
               ]
             }
           ],
-          "count": 104
+          "count": 105
         },
         {
           "title": "Retrieval",
@@ -5382,6 +5438,12 @@
                           ]
                         },
                         {
+                          "title": "LFM2.5 Retrievers: Bi-directional LFMs for Fast Multilingual Search - Liquid (2026)",
+                          "url": "https://x.com/liquidai/status/2067610173024219225/photo/1",
+                          "note": "",
+                          "children": []
+                        },
+                        {
                           "title": "Revisiting Text Ranking in Deep Research (2026)",
                           "url": "https://arxiv.org/pdf/2602.21456",
                           "note": "",
@@ -5394,6 +5456,12 @@
                           "children": []
                         }
                       ]
+                    },
+                    {
+                      "title": "Retrievable Gradients: Continual Post-Training Without Cumulative Weight Drift (2026)",
+                      "url": "https://arxiv.org/pdf/2606.15734",
+                      "note": "",
+                      "children": []
                     },
                     {
                       "title": "Hypencoder: Hypernetworks for Information Retrieval (2026)",
@@ -5650,10 +5718,10 @@
               ]
             }
           ],
-          "count": 81
+          "count": 83
         }
       ],
-      "count": 902
+      "count": 913
     },
     {
       "title": "Model Architecture",
@@ -5959,6 +6027,19 @@
                   "url": "https://x.com/fly51fly/status/1995975767143190982",
                   "note": "",
                   "children": []
+                },
+                {
+                  "title": "Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding (2026)",
+                  "url": "https://x.com/PavloMolchanov/status/2056799786377039995",
+                  "note": "",
+                  "children": [
+                    {
+                      "title": "Speculative Decoding - The Bits and the Bytes! - blog (2026)",
+                      "url": "https://x.com/A_K_Nain/status/2068155625440227683",
+                      "note": "",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -6005,12 +6086,6 @@
                     {
                       "title": "Breaking the Factorization Barrier in Diffusion Language Models (2026)",
                       "url": "https://x.com/IanLi1118/status/2029074519223353362",
-                      "note": "",
-                      "children": []
-                    },
-                    {
-                      "title": "Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding (2026)",
-                      "url": "https://x.com/PavloMolchanov/status/2056799786377039995",
                       "note": "",
                       "children": []
                     }
@@ -6157,6 +6232,12 @@
               "children": []
             }
           ]
+        },
+        {
+          "title": "Variable-Width Transformers (2026)",
+          "url": "https://x.com/zhaofeng_wu/status/2067694654607507646",
+          "note": "",
+          "children": []
         },
         {
           "title": "Interaction Models: A Scalable Approach to Human-AI Collaboration (2026)",
@@ -6417,6 +6498,12 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "title": "Dynamic Linear Attention (2026)",
+              "url": "https://x.com/askalphaxiv/status/2066638329882325251",
+              "note": "",
+              "children": []
             },
             {
               "title": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (2025)",
@@ -6922,7 +7009,14 @@
                   "title": "Olmo Hybrid tech report (2026)",
                   "url": "https://x.com/allen_ai/status/2029591872612561189",
                   "note": "",
-                  "children": []
+                  "children": [
+                    {
+                      "title": "Which tokens does a hybrid model predict better? (2026)",
+                      "url": "https://x.com/allen_ai/status/2070180892396429486",
+                      "note": "",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "title": "Super Apriel: One Checkpoint, Many Speeds (2026)",
@@ -7192,6 +7286,12 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention - blog (2026)",
+              "url": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+              "note": "",
+              "children": []
             }
           ]
         },
@@ -7340,7 +7440,7 @@
         }
       ],
       "subsections": [],
-      "count": 269
+      "count": 274
     },
     {
       "title": "Theory",
@@ -7424,6 +7524,12 @@
                     {
                       "title": "Learning Long-term Motion Embeddings for Efficient Kinematics Generation (2026)",
                       "url": "https://arxiv.org/abs/2604.11737",
+                      "note": "",
+                      "children": []
+                    },
+                    {
+                      "title": "You Don't Need Strong Assumptions: Visual Representation Learning via Temporal Differences (2026)",
+                      "url": "https://x.com/AlexiGlad/status/2066924200405979559/photo/1",
                       "note": "",
                       "children": []
                     }
@@ -7552,7 +7658,7 @@
               ]
             }
           ],
-          "count": 32
+          "count": 33
         },
         {
           "title": "ML",
@@ -8022,7 +8128,14 @@
                       "title": "How's it going? Reinforcement learning in language models recruits a functional welfare axis (2026)",
                       "url": "https://x.com/Pavel_Izmailov/status/2060409802484744330",
                       "note": "",
-                      "children": []
+                      "children": [
+                        {
+                          "title": "The Value Axis: Language Models Encode Whether They're on the Right Track (2026)",
+                          "url": "https://x.com/nickhjiang/status/2067286555690172885",
+                          "note": "",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "title": "Forecasting Future Behavior as a Learning Task (2026)",
@@ -8230,6 +8343,12 @@
                 {
                   "title": "A Mathematical Framework for Transformer Circuits (2021)",
                   "url": "https://transformer-circuits.pub/2021/framework/index.html",
+                  "note": "",
+                  "children": []
+                },
+                {
+                  "title": "Verbalizable Representations Form a Global Workspace in Language Models (2026)",
+                  "url": "https://transformer-circuits.pub/2026/workspace/index.html#discuss-differences",
                   "note": "",
                   "children": []
                 },
@@ -8615,10 +8734,10 @@
               "children": []
             }
           ],
-          "count": 134
+          "count": 136
         }
       ],
-      "count": 200
+      "count": 203
     },
     {
       "title": "Other",
@@ -8675,6 +8794,12 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "title": "This is how the Neocortex Learns (2026)",
+                  "url": "https://x.com/che_shr_cat/status/2066642112754466904",
+                  "note": "",
+                  "children": []
                 }
               ]
             },
@@ -8720,6 +8845,19 @@
             {
               "title": "Hippocampus modular representations (2025)",
               "url": "https://x.com/antferrui/status/1901443145050599680",
+              "note": "",
+              "children": [
+                {
+                  "title": "Sparse-to-dense coding transformation between hippocampal areas CA3 and CA1 (2026)",
+                  "url": "https://www.nature.com/articles/s41586-026-10537-0",
+                  "note": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "title": "Memory and decision making interact to shape the value of unchosen options (2021)",
+              "url": "https://www.nature.com/articles/s41467-021-24907-x",
               "note": "",
               "children": []
             },
@@ -8991,7 +9129,7 @@
               ]
             }
           ],
-          "count": 58
+          "count": 61
         },
         {
           "title": "DSA",
@@ -9062,7 +9200,7 @@
           "count": 10
         }
       ],
-      "count": 68
+      "count": 71
     }
   ]
 }
