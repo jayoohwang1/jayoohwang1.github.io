@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// TODO: replace with your details.
 const name = 'Jayoo Hwang';
 const tagline = 'AI researcher and engineer.';
 const email = 'jayoohm350@gmail.com';
@@ -19,7 +18,6 @@ const socials = [
   { label: 'X', icon: 'x', href: 'https://x.com/JayooHwang' },
 ].filter((s) => s.ready !== false);
 
-// TODO: replace with your publications.
 const publications = [
   {
     title: 'WebChallenger: A Reliable and Efficient Generalist Web Agent',
@@ -44,12 +42,10 @@ const publications = [
       <h1>{name}</h1>
       <p class="tagline">{tagline}</p>
       <p>
-        <!-- TODO: short about-me paragraph. Background, current affiliation,
-             what you're currently working on, and what you're interested in. -->
         I work on building systems that utilize LLMs as effectively as possible.
         I'm interested in harness design, RL, context processing, and memory for agents.
       </p>
-      <p>Check my <a href='reading/'}>reading list</a> for cool papers and blogs I've come across.</p>
+      <p>Check my <a href='reading/'>reading list</a> for cool papers and blogs I've come across.</p>
       {showBestWork && (
         <p>
           <b>My best work:</b> created <a href="https://jayoohwang1.github.io/webchallenger-site/">WebChallenger</a>, a generalist web agent that achieved
