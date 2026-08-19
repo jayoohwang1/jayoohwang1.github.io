@@ -43,6 +43,20 @@ The share-post framing and narrated candor rules entered the upstream catalog re
 
 This weighting also applies in reverse: when drafting text rather than auditing it, treat the list above as the patterns most likely to appear in your own output, and run the audit against yourself before delivering.
 
+### Subtler Claude patterns (series-scale, judgment-only)
+
+Observed across multi-post audits of Claude-drafted content. Each instance is usually good writing on its own; the tell is the rate and the uniformity, so judge these across a whole piece or series rather than flagging single occurrences. They also survive de-AI rewrite passes, because they are generation preferences rather than surface phrases: an edit that clears the pattern catalog can leave all of these intact, or make them worse.
+
+- **Setup-colon-payoff hinges.** Sentences shaped "abstract claim: concrete cash-out" ("Every run is the first run: same login, same menus, same wrong turns"). The em-dash rule does not catch this. The hinge survives punctuation swaps, and an edit that converts flagged dashes often raises the colon density instead. Cap the two-part hinge shape itself, whatever glyph carries it: a few per post, not a few per paragraph. Rewrite the rest as plain declaratives, or fold the payoff into the claim.
+- **Paragraph-final mic-drops.** Every paragraph ends on its strongest, most quotable beat; none end flat, on a qualifier, or on housekeeping. This is terminal-emphasis uniformity at paragraph scale (the manufactured-punchlines rule above covers only fragment runs). Fix: deliberately end one or two paragraphs per piece on the mundane sentence instead of the quotable one.
+- **Trailing re-description.** A claim, a comma, then the same claim restated more vividly ("repetitive desk work, done the way a person does it, on the same screens"). The restatement adds texture, never information. One per post reads as voice; one per paragraph reads as a rhythm quota. Cut the restatement or replace it with a detail that is new.
+- **Single explanatory register (sustained personification).** Every mechanism explained through a human-behavior metaphor: models "spend their money," "stay sharp," build "muscle memory," "think only where thinking is needed." Each is fine alone. The fingerprint is that no mechanism ever gets the dry mechanical explanation. Fix: vary the register; explain some things plainly.
+- **Numbers never arrive naked.** Every figure is delivered inside a tidy comparison frame, usually with round anchors (thousands of tokens vs. a handful, three workflows vs. thirty, two minutes vs. two hours, step 90 vs. step 5). Human technical writing drops some numbers flat and moves on. Fix: let a few figures stand uninterpreted.
+- **No residue.** Every question raised is answered within a sentence or two, or explicitly deferred; there are no unresolved observations and no genuine "we don't know why." Perfectly managed suspense sustained across a whole piece or series is a shape humans rarely hold. Fix: keep one authentic loose end where the material has one, such as an unexplained data point or a caveat that stays a caveat. Never invent one (see Never inject these).
+- **Second-person conscription.** Every illustrative example stages the reader as its subject ("your portals," "your first day," "you read every menu"). Fine as one move among several; as the only way examples get staged, it is another single-register tell. Fix: vary the staging across a named third party, the writer, or no actor at all.
+
+Editor warning: these are the patterns most likely to persist through, or be introduced by, a rewrite pass performed by a Claude model, including one applying this skill. After any rewrite, re-check the hinge-sentence and paragraph-ending distributions specifically.
+
 <!-- END LOCAL ADDITION -->
 
 ## Modes
