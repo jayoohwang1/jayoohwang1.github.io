@@ -1,8 +1,8 @@
 # avoid-ai-writing (vendored skill)
 
-`SKILL.md` is copied verbatim from https://github.com/conorbronsdon/avoid-ai-writing (v3.25.0, MIT license, by Conor Bronsdon).
+`SKILL.md` is copied from https://github.com/conorbronsdon/avoid-ai-writing (v3.25.0, MIT license, by Conor Bronsdon), plus one local section not in upstream: "Model-era weighting: Claude-specific notes", delimited by `BEGIN LOCAL ADDITION` / `END LOCAL ADDITION` HTML comments near the top of the file.
 
-To update, replace `SKILL.md` with the latest version from the source repo:
+To update, replace `SKILL.md` with the latest version from the source repo, then re-insert the local block (after the "What this skill is and isn't" section):
 
 ```bash
 curl -o .claude/skills/avoid-ai-writing/SKILL.md \

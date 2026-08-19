@@ -24,6 +24,27 @@ The patterns are useful as a signal — both for cleaning up your own writing an
 
 In short: signals, not proof. Worth acting on; not worth ruining someone's day over.
 
+<!-- BEGIN LOCAL ADDITION: Claude-era weighting notes. Not in upstream
+     conorbronsdon/avoid-ai-writing — preserve this block when syncing SKILL.md. -->
+
+## Model-era weighting: Claude-specific notes (local addition)
+
+Tells are specific to a model family and a model era, and they decay. "Delve" reads as a tell because GPT-3.5/GPT-4-era OpenAI models overused it; current models, OpenAI's included, rarely emit it, so a lone "delve" in new text says little about authorship. Vocabulary tells rot fastest: once a word becomes a meme, vendors tune it away and the tell migrates into structure and register. Weight the catalog accordingly — on recent-model text, Tier 1A vocabulary hits carry less evidence than they did in 2023, and the structural and register rules carry more.
+
+Text from recent Anthropic models (Claude) shows its own cluster of overused patterns. When the text under audit is known or likely to be Claude output — including this assistant's own drafts — raise these to the top of the audit regardless of their listed severity tier:
+
+- **"It's not X, it's Y" and every variant** (see Sentence structure): the joined form, the split-sentence form, the multi-negation countdown, the tailing negation. Expect multiples per piece, and check the split form specifically, since it evades a scan tuned to the joined phrasing.
+- **Structure patterns as a group**: uniform paragraph sizes, inline-header lists, heading scaffolds over short spans, numbered-list packaging, excessive structure. The formatting is immaculate and the sameness across pieces is what readers notice.
+- **Lingering-attention claims** (Share-post framing): "the line I keep coming back to," "I can't stop thinking about this."
+- **Narrated candor**: "I want to be upfront:", "two caveats I'd rather flag than let you discover later."
+- **Engagement hooks** (Infomercial engagement hooks, rhetorical-question openers, and hook-shaped first lines generally): Claude writes effective hooks and installs one far more often than a human writer would, especially in informal registers. In a blog post or social draft, allow at most one hook per piece and prefer opening on the substance; a second hook is a cut, not a judgment call.
+
+The share-post framing and narrated candor rules entered the upstream catalog recently (v3.20 and v3.21), consistent with tells shifting toward the current model era rather than the GPT-3.5 one.
+
+This weighting also applies in reverse: when drafting text rather than auditing it, treat the list above as the patterns most likely to appear in your own output, and run the audit against yourself before delivering.
+
+<!-- END LOCAL ADDITION -->
+
 ## Modes
 
 This skill operates in one of three modes:
